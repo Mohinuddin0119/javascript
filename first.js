@@ -421,7 +421,39 @@ console.log(fruits.slice(4,5));
 const pizza = ['p','i', 'z', 'z', 'a'];
 console.log(pizza.slice(0,2));
 
-// for loop
+//while loop
+let num = 0;
+while(num < 5){
+    console.log("loooping", num);
+    // num = num + 1;
+    // num += 1;
+    num++;
+}
+
+//problem
+let num = 1;
+let sum = 0;
+while(num <= 10){
+    console.log(num);
+    sum += num;
+    console.log("sum :",sum);
+    num++;
+}
+// even number
+let num1 = 1;
+while(num1 <= 10){
+    if(num1 % 2 === 0){
+        console.log('even number :',num1);
+    }
+    else{
+        console.log(num1)
+    }
+    num1++;
+}
+
+// ------for loop-----
+
+//---For of-
 const numbers = [12,22,33,44,55];
 console.log(numbers);
 for(const num of numbers){
@@ -432,14 +464,43 @@ const fruits = ['apple', 'banana', 'lithci','jackfruit'];
 for(const fruit of fruits){
     console.log(fruit);
 }
-*/
-//while loop
-let num = 0;
-while(num < 5){
-    console.log("loooping", num);
-    // num = num + 1;
-    // num += 1;
-    num++;
+
+// for loop
+//** structure
+//** for(loop variable ; loop condition; increement/decrement)
+for(let num = 1; num < 5; num++){
+    console.log(num);
+}
+//
+for(let i = 5; i<10; i++){
+    console.log(i);
 }
 
-// 18_2
+//even 
+for(let i = 0; i < 10; i+=2){
+    console.log("even number :",i);
+}
+// odd 
+for(let i = 1; i < 20; i+=2){
+    console.log('Odd number : ',i);
+}
+
+//sum of number
+let sum = 0;
+for(let i = 0 ; i <= 20; i++){
+    console.log(i);
+    sum += i;
+}
+console.log("sum of numbers from 0 to 20 is :",sum);
+
+// decrement for loop
+for(let i = 10; i >= 0; i--){
+    console.log(i);
+}
+// decrement while loop
+let n = 10;
+while(n >= 0){
+    console.log(n);
+    n--;
+}
+*/

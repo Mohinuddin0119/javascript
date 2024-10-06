@@ -149,10 +149,58 @@ console.log(Array.isArray(department));
 console.log(Array.isArray(age));
 console.log(Array.isArray(food));
 console.log(Array.isArray(name));
-*/
+
 // array task 5
 const firstName = ['Muhammad','mohin','mahin'];
 const lastName = ['hossain','uddin'];
 console.log(firstName);
 console.log(lastName);
 console.log(firstName.concat(lastName));
+
+// odd number
+let num = 61; 
+while(num <= 100){
+    if(num % 2 === 1){
+        console.log('odd number : ',num);
+    }
+    else{
+        console.log(num);
+    }
+    num++;
+}
+
+// even number
+let num = 78;
+while(num <= 98){
+    if(num % 2 === 0){
+        console.log("even number :",num);
+    }
+    else{
+        console.log(num);
+    }
+    num++;
+}
+//sum of all odd numbers
+let number = 81;
+let sum = 0;
+while(number <= 131){
+    if(number % 2 === 1){
+        console.log("odd number :",number);
+        sum += number;
+        }
+        number++;
+}
+console.log("sum is:",sum);
+
+//sum of all even numbers
+let number2 = 206;
+let sum = 0;
+while(number2 <= 311){
+    if(number2 % 2 === 0){
+        console.log('Even number :',number2);
+        sum += number2;
+    }
+    number2++;
+}
+console.log("sums of numbers from 206 to 311 is :",sum);
+*/
