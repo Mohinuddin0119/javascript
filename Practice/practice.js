@@ -62,5 +62,39 @@ console.log(number); //first add
 const num = [10,20,30,30,50];
 console.log(num.indexOf(30));
 console.log(num.includes(50));
+
+
+//give me the numbers from 1 to 30 that are divisible by 5
+for(let i = 1; i <= 30; i++){
+    if(i % 5 === 0){
+        console.log(i);
+    }
+}
+//
+for(let i = 1; i <= 30; i++){
+    if(i % 5 ===0 || i % 3 ===0){
+        console.log(i);
+    }
+}
+//
+for(let i = 1; i <= 30; i++){
+    if(i % 3 === 0 && i % 5 ===0){
+        console.log(i);
+    }
+}
 */
+// give me the sum of numbers from 1 to 20 that are divisible by 3 
+let sum = 0;
+for(let i = 1; i <= 20; i++){
+    if(i % 3 === 0){
+        console.log(i);
+        sum += i;
+    }
+}
+console.log("The sum of numbers from 1 to 20 is :",sum);
+
+
+
+
+
 // part 3 end

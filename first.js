@@ -1,4 +1,4 @@
-// [ first to variable, Operator,condition,array, for loop , while loop ]
+// [ first to variable, Operator,condition,array, for loop , while loop,string(touppercase,lowercase,trim,slice,join,concat,includes),string reverse,object ]
 
 /*
 // variable data types
@@ -503,4 +503,186 @@ while(n >= 0){
     console.log(n);
     n--;
 }
+
+// ---break--(end of loop)
+// use for loop
+for(let i = 1; i <= 10; i++){
+    console.log(i);
+    if(i >= 5){
+        break;
+    }
+}
+//use while loop
+let i = 54;
+while(i > 30){
+    if(i < 50){
+        break;
+    }
+    console.log(i);
+    i--;
+}
+
+// continue = skip this code for this iteration(just skip of one iteration) 
+for(let i = 1 ; i<10; i++){
+    if(i % 2 === 1){
+        continue;
+    }
+    console.log(i);
+}
+//
+let i = 0;
+while(i <= 20){
+    i++;
+    if(i % 2 === 0){
+        continue;
+    }
+    console.log(i);
+}
+
+// do-while
+let i = 0;
+do{
+    console.log(i);
+    i++;
+}
+while(i < 5);
+//exam (when output is false just show first value)
+let n = 10;
+do{
+    console.log(n);
+    n++;
+}
+while(n < 5);
+
+// string
+// declaration  method
+const name1 = 'mohin';
+const dept = "CST";
+const country = `bangladesh`;
+console.log(typeof name1);
+console.log(typeof dept);
+console.log(typeof country);
+
+// string like Array
+// string is immutable(not change)
+const capital = 'Dha ka'; //space countable
+console.log(capital.length); //6
+console.log(capital[1]);
+capital[1] = 'f'; //not change
+console.log(capital);
+// array mutablea(you can change the array elements)
+const numbers = [1,3,3,4,5];
+numbers[1] = 2; //changeable
+console.log(numbers);
+
+// lowerCase and uppercase
+const subject = "Physices"
+const book = "math";
+console.log(subject)
+console.log(subject.toLowerCase());
+console.log(book.toUpperCase());
+const school = 'hazi monir hossain high school';
+const college = "Hazi monir Hossain High School";
+if(school === college.toLowerCase()){
+    console.log("this is true");
+}
+else{
+    console.log("this is false");
+}
+
+// trim method
+const drink = "water ";
+const liquid = ' water';
+if(drink.trim() === liquid.trim()){
+    console.log("this is true");
+}
+else{
+    console.log("this is false");
+}
+
+// slice(start,end before) convert as an array
+const address = "Rayerbag";
+console.log(address.slice(0,5)); //Rayer
+
+// split (alada kora )
+const sentence = "I am a good person";
+const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+console.log(sentence.split());
+console.log(alphabet.split(""));
+console.log(sentence.split('a'));
+const friends = 'rahim,mahim,nahim,mahi';
+console.log(friends.split(','));
+
+// join(add korar jonno)
+const realFriends = ['mahi','mohin','rafi','ayon'];
+console.log(realFriends.join());
+console.log(realFriends.join("!_")); 
+
+// concat(two string connect)
+const first = "mohin";
+const last = "uddin";
+const fullName = first + ' ' + last;
+console.log(fullName);
+console.log(first,last);
+console.log(first.concat(" ").concat(last).concat(' ').concat(first));
+// includes
+console.log(first.includes('M')); //false because case sensitive
+
+// string reverse
+const sentence = 'I am Learning Web Dev.'
+// ---first way
+// devel
+//d
+//ed
+//ved
+//eved
+//leved
+let reverse = '';
+for(letter of sentence){
+    // console.log(letter);
+    reverse = letter + reverse;
+}
+console.log(reverse);
+
+// second way
+let rev = '';
+for(let i = 0; i <sentence.length; i++){
+    // console.log(i); //just show index
+    // console.log(sentence[i]); //just show value
+    const letter = sentence[i];
+    rev = letter + rev;
+}
+console.log(rev);
+
+// third way
+const reversed = sentence.split('').reverse().join('');
+console.log(reversed);
+
+// Object 
+// new keyword
+const person = new String('mohin');
+console.log(person);
+const man = new Object('rafi');
+console.log(man);
 */
+const person1 = {
+    firstName : 'mohin',
+    lastName : 'uddin',
+    age  : 19,
+    isEmplayed : true,
+    fullName :function() {return (this.firstName + ' ' + this.lastName)}
+}
+const person2 = {
+    firstName : 'mahi',
+    lastName : 'muhammad',
+    age  : 19,
+    isEmplayed : true
+}
+console.log(person1.firstName);
+console.log(person1.lastName);
+console.log(person1.isEmplayed);
+console.log(person1.fullName());
+
+// console.log(person2.firstName);
+// console.log(person2.lastName);
+// console.log(person2.isEmplayed);

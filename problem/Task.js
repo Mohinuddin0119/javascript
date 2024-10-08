@@ -157,7 +157,14 @@ console.log(firstName);
 console.log(lastName);
 console.log(firstName.concat(lastName));
 
-// odd number
+//-----use while loop-----
+// display 60 times
+let i = 0;
+while(i <= 60){
+    console.log("I will invest at least 6 hours every single day for next 60 days!");
+    i++;
+}
+// odd number use while
 let num = 61; 
 while(num <= 100){
     if(num % 2 === 1){
@@ -169,7 +176,7 @@ while(num <= 100){
     num++;
 }
 
-// even number
+// even number use while
 let num = 78;
 while(num <= 98){
     if(num % 2 === 0){
@@ -180,7 +187,7 @@ while(num <= 98){
     }
     num++;
 }
-//sum of all odd numbers
+//sum of all odd numbers use while
 let number = 81;
 let sum = 0;
 while(number <= 131){
@@ -192,7 +199,7 @@ while(number <= 131){
 }
 console.log("sum is:",sum);
 
-//sum of all even numbers
+//sum of all even numbers use while
 let number2 = 206;
 let sum = 0;
 while(number2 <= 311){
@@ -203,4 +210,48 @@ while(number2 <= 311){
     number2++;
 }
 console.log("sums of numbers from 206 to 311 is :",sum);
+
+// countdown use while
+let i = 21;
+while(i >= 15){
+    console.log(i);
+    i--;
+}
+
+//-----use for loop-----
+//generate a multiplication table use for
+
+const number = 5;
+for(let i = 1; i <= 10; i++){
+    const result = i * number;
+    console.log(`${number} * ${i} = ${result}`);
+}
+// odd number use for loop
+for(let i = 1; i <= 10; i++){
+    if(i % 2 !== 0){
+        console.log('odd number is :',i);
+    }
+}
+// even number use for 
+for(let i = 1; i <= 10; i++){
+    if(i % 2 !== 1){
+        console.log('even number is :',i);
+    }
+}
+
+// break task
+for(let i = 1; i < 200; i++){
+    if(i > 100){
+        break;
+    }
+    console.log(i);
+}
+let i = 1;
+while(i < 200){
+    if(i >= 100){
+        break;
+    }
+    i++;
+    console.log(i);
+}
 */
