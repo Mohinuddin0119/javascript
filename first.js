@@ -1,4 +1,4 @@
-// [ first to variable, Operator,condition,array, for loop , while loop,string(touppercase,lowercase,trim,slice,join,concat,includes),string reverse,object ]
+// [ first to variable, Operator,condition,array, for loop , while loop,string(touppercase,lowercase,trim,slice,join,concat,includes),string reverse,object,traversing and reversing in an array ]
 
 /*
 // variable data types
@@ -604,6 +604,11 @@ else{
 const address = "Rayerbag";
 console.log(address.slice(0,5)); //Rayer
 
+// splice(start,deleteCount)
+const numbers = [10,0,0,30,50,100];
+const splice = numbers.splice(1,2);
+console.log(splice);
+
 // split (alada kora )
 const sentence = "I am a good person";
 const alphabet = 'abcdefghijklmnopqrstuvwxyz';
@@ -664,7 +669,7 @@ const person = new String('mohin');
 console.log(person);
 const man = new Object('rafi');
 console.log(man);
-*/
+
 const person1 = {
     firstName : 'mohin',
     lastName : 'uddin',
@@ -676,13 +681,175 @@ const person2 = {
     firstName : 'mahi',
     lastName : 'muhammad',
     age  : 19,
-    isEmplayed : true
+    isEmplayed : true,
+    'fav subject':['math','higher math'],
 }
+person2['fav subject']= ['Biology','Math'];
+person1.age = 20;
+//---dot notation/ dot diye acces
 console.log(person1.firstName);
 console.log(person1.lastName);
+console.log(person1.age);
 console.log(person1.isEmplayed);
 console.log(person1.fullName());
+//---bracket notation/ third bracket diye acces
+console.log(person2['firstName']);
+console.log(person2['isEmplayed']);
+console.log(person2["fav subject"]); //dot diye acces kora jay na
 
-// console.log(person2.firstName);
-// console.log(person2.lastName);
-// console.log(person2.isEmplayed);
+// keys / property
+const student = {
+    name : "mohin",
+    age : 20,
+    color:'white',
+    isStudent: true,
+}
+const keys = Object.keys(student);
+console.log(keys);
+//values
+const Person = {
+    name : 'Mahi',
+    age : 20,
+    color : 'white',
+    married :true
+}
+console.log(Object.values(Person));
+
+// nested object
+const college = {
+    name : "GAI",
+    class : ["1st",'2nd','3rd'],
+    events : ['scicence fair','bijoy dibos','21 feb'],
+    unique :{
+        color : 'blue',
+        result : {
+            CGPA : 3.50,
+            merit : 'top'
+        }
+    }
+}
+// console.log(college.events);
+// console.log(college.unique);
+// console.log(college.unique.color);
+console.log(college.unique.result.CGPA);
+
+// delete from object property
+const man = {
+    name : 'rafi',
+    age :20,
+    semester : "6th"
+}
+delete man.semester;
+console.log(man);
+
+// looping use objects
+// for in use
+const mobile = {
+    brand: "samsung",
+    price : 20000,
+    model : 'a04s'
+}
+for(const key in mobile){
+    console.log(key);
+    console.log(mobile[key]);
+}
+// for of
+const student = {
+    name : "Mohin",
+    age : 20,
+    height : 5.4
+}
+
+const keys = Object.keys(student);
+for(const key of keys){
+    console.log(key, ":",student[key]);
+}
+
+// object creat way
+// literal
+const pen = {brand:'matardor',price:10,color:"white"};
+console.log(pen);
+//new keyword
+const pencil = new Object();
+console.log(pencil);
+// object.create()
+const rubber = Object.create({});
+console.log(rubber);
+
+// ---looping using technique
+//  * for loop
+//  * while loop
+//  * do while
+//  * for of = array loop korar jonno
+//  * for in = object loop korar jonno
+
+// traversing
+const friends = ['Mahi','Rafi','Abrar','Hasan','Sayel'];
+//
+for(const friend of friends){
+    // console.log(friend);
+}
+// 
+for(let i = 0; i < friends.length; i++){
+    // console.log(friends[i]);
+}
+// 
+const numbers = [12,2,3,6,4524,654,654,654,6546,54,654,10000];
+let i = 0;
+while(i < numbers.length){
+    console.log(numbers[i]);
+    i++;
+}
+
+// Reverseing an array
+// 
+const numbers = [1,2,3,5,6,8,9,10];
+// numbers.reverse();
+// console.log(numbers);
+// 
+let rev_num = [];
+for(const number of numbers){
+    rev_num.unshift(number);
+}
+// console.log(rev_num);
+// 
+const friends = ["abrar",'rafi','mahi','sayel','hasan'];
+let rev_number = [];
+for(let i = 0; i < friends.length; i++){
+    rev_number.unshift(friends[i]);
+}
+// console.log(rev_number);
+// 
+const number = [10,20,30,40,65,70,80,90,100];
+let rev = [];
+for(let i = number.length - 1; i >= 0; i-- ){
+    // console.log(number[i]);
+    rev.push(number[i]);
+}
+console.log(rev);
+
+// --sort()
+const persons = ['anis','nakib','sakib','rakib'];
+const sortedPersons = persons.sort();
+// console.log(sortedPersons);
+const person = ['Anis','nakib','sakib','Bakib','Akib'];
+console.log(person.sort());  //sort start alphabetic
+// 1 to 9
+const numbers = [5,4,8,7,2,1,9];
+const asending = numbers.sort();
+// console.log(asending);
+// 
+const desending = numbers.reverse();
+// console.log(desending);
+// 10 to .....
+const num = [10,12,20,2,3,32,40,50];
+const num_asc = [...num].sort(function(a,b){
+    return a - b
+});
+console.log(num_asc);
+// 
+const num_des = [...num].sort(function(a,b){
+    return b - a
+})
+console.log(num_des);
+*/

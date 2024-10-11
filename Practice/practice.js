@@ -61,6 +61,10 @@ number.unshift(50);
 console.log(number); //first add
 const num = [10,20,30,30,50];
 console.log(num.indexOf(30));
+// last index value show
+let num1 = [10,20,30,5,0,50];
+const lastlength = num1.length - 1;
+console.log(num1[lastlength]);
 console.log(num.includes(50));
 
 
@@ -82,7 +86,7 @@ for(let i = 1; i <= 30; i++){
         console.log(i);
     }
 }
-*/
+
 // give me the sum of numbers from 1 to 20 that are divisible by 3 
 let sum = 0;
 for(let i = 1; i <= 20; i++){
@@ -93,8 +97,30 @@ for(let i = 1; i <= 20; i++){
 }
 console.log("The sum of numbers from 1 to 20 is :",sum);
 
+// string methods
+const sentence = ' I am Bad Boy ';
+console.log(sentence.length);
+console.log(sentence.slice(5,8));
+console.log(sentence.split("a"));
+console.log(sentence.toUpperCase());
+console.log(sentence.toLowerCase());
+console.log(sentence.trim());
+console.log(sentence.trimEnd());
+console.log(sentence.includes('a'));
+console.log(`He's often called "mohin"`);
+// splice(start,deleteCount)
+const numbers = [10,15,0,0,30,50,100];
+numbers.splice(1,2);
+console.log(numbers);
+const delAdd = numbers.splice(2,2,20,60);
+console.log(numbers);
+// just add 
+console.log(numbers.splice(2,0,20,25));
+console.log(numbers);
+*/
 
 
 
 
-// part 3 end
+
+//

@@ -254,4 +254,116 @@ while(i < 200){
     i++;
     console.log(i);
 }
+
+// object task
+// task 1
+const colors ={
+    red : "#ff0000",
+    green : "#00ff00",
+    blue: '#0000ff',
+    'golden rod' : '#daa520'
+};
+console.log(colors['golden rod']);
+// task 2 (object add)
+const car = {
+    make : 'Toyota',
+    model : 'Corolla',
+    year :2020
+};
+car['passenger capacity'] = 5;
+console.log(car);
+
+// the physics marks as output.
+const student ={
+    name : 'Mohin uddin',
+    id : 5421,
+    physics : {
+        subject : 'HSC Physics',
+        author : "Shajahan tapan",
+        marks : 30
+    }
+};
+console.log(student.physics.marks);
+// count number of properties
+let person = {
+    name :'Ariana Grande',
+    age :21,
+    city :'Gaibanda',
+    isPerson : true
+};
+const keys = Object.keys(person);
+console.log(keys.length);
+
+// Loop through an object and print the key-value pairs with their types
+const myObject ={
+    name : 'Mahi',
+    age :20,
+    city:'Dhaka',
+    isStudent: true
+};
+for(const key in myObject){
+    console.log("key :",key, "|", "Type :", typeof key);
+}
+
+// array looping task
+// task 1
+const colors = ['red','blue','green','yellow','orange'];
+const reversed = [];
+for(const color of colors){
+    // console.log(color);
+    reversed.unshift(color);
+}
+// console.log(reversed);
+let rev = [];
+for(let i = 0; i < colors.length; i++){
+    const color = colors[i];
+    rev.unshift(color);
+}
+// console.log(rev);
+let rev_num = [];
+for(let i = colors.length - 1; i >= 0; i--){
+    const color = colors[i];
+    rev_num.push(color);
+}
+console.log(rev_num);
+// task 2
+const numbers = [12,98,5,41,23,75,46,76];
+const asc = numbers.sort(function(a,b){
+    return a-b;
+})
+let rev = [];
+for(const number of asc){
+    // console.log(number);
+    if(number % 2 === 0){
+        // console.log('even number is :',number);
+        rev.push(number);
+    }
+    else{
+        // console.log("odd number is ",number);
+    }
+}
+console.log(rev);
+
+let sentences = ['Tom','Tim','Tin','Tik'];
+let save = '';
+for(const sentence of sentences){
+     save += sentence;
+}
+console.log(save);
+// 
+let string = '';
+for(let i = 0; i <sentences.length; i++){
+    string += sentences[i];
+}
+console.log(string);
 */
+// task 4
+const statement = 'I am a hard working person';
+let rev = '';
+const state = statement.split(' ');  //when space alada hoye array make koreche
+console.log(state);
+for(const part of state){
+    rev = part + " " + rev
+}
+console.log(rev);;
+
