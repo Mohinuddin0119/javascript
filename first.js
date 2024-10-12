@@ -1,4 +1,4 @@
-// [ first to variable, Operator,condition,array, for loop , while loop,string(touppercase,lowercase,trim,slice,join,concat,includes),string reverse,object,traversing and reversing in an array ]
+// [ first to variable, Operator,condition,array, for loop , while loop,string(touppercase,lowercase,trim,slice,join,concat,includes),string reverse,object,traversing and reversing in an array,function ]
 
 /*
 // variable data types
@@ -852,4 +852,131 @@ const num_des = [...num].sort(function(a,b){
     return b - a
 })
 console.log(num_des);
+
+// ---function
+// function declaration method
+function fname(){
+    console.log("Hello world");
+}
+// calling function
+fname();
+// 
+function fanOffkor(){
+    console.log('bose thake uthe dara');
+}
+fanOffkor();
+// Add Function parameter
+function add(a,b){
+    console.log('add is :',a+b);
+}
+add(2,3);
+// handle multiple parameters
+function square(number1,number2){
+    console.log('value of number is :',number1, " * ",number2);
+    return number1 * number2;
+}
+console.log(square(4,7));
+// 
+function addAll(a,b,c,d,e){
+    const sum = a+b+c+d+e;
+    console.log(sum);
+}
+addAll(1,2,5,1,1);
+// argument hisabe variable use
+function difference(num1,num2){
+        const diff = num1 - num2;
+        console.log(num1,num2,'difference is :',diff);
+}
+const fatherAge = 40;
+const myAge = 15;
+difference(fatherAge,myAge);
+difference(30,50);
+
+// Function return and set return value to a variable
+function tenTimes(number){
+    const result = number * 10;
+    return result;
+}
+console.log(tenTimes(10));
+const ten = tenTimes(11);
+console.log(ten);
+const output = tenTimes(99);
+console.log(output);
+
+// recap
+function bill(price1,price2){
+    return price1 + price2;
+}
+const out = bill(5,5);
+console.log(out);
+// 
+function doMath(num1,num2){
+    const sum = num1 + num2;
+    const diff = num1 - num2;
+    const multiply = sum * diff;
+    const result = multiply / 2;
+    return result;
+}
+console.log(doMath(10,5));
+// even number use function
+function isEven(number){
+    if(number % 2 ===0){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+console.log(isEven(5))
+console.log(isEven(120));
+// odd number use function
+function isOdd(number){
+    if(number % 2 === 1){
+        return true;
+    }
+    return false;
+}
+console.log(isOdd(5));
+console.log(isOdd(10));
+// different type of function parameter
+// string type function parameter
+function string(str){
+    const len = str.length
+    console.log(str,len);
+    if(len % 2 ===0){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+console.log(string('Bangladeshi'));
+console.log(string('Madina'));
+// boolean type function parameter
+function doubleOrTriple(number,doDouble){
+    if(doDouble === true){
+        const result = number * 2;
+        return result;
+    }
+    else{
+        const result = number * 3
+        return result;
+    }
+}
+console.log(doubleOrTriple(5,false));
+console.log(doubleOrTriple(5,true));
+// Array type function parameter
+function numberOfElement(number){
+    const len = number.length;
+    return len;
+}
+console.log(numberOfElement([12,2,5,100]))
+console.log(numberOfElement(['mohin','mahi','nahim']));
+// object type function parameter
+function getAge(person){
+    const age = person.age;
+    const name = person.name;
+    console.log(age, name);
+}
+getAge( person = { age : 19,name:'mohin'});
 */

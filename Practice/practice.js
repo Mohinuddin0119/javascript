@@ -118,9 +118,15 @@ console.log(numbers);
 console.log(numbers.splice(2,0,20,25));
 console.log(numbers);
 */
-
-
-
+const sentence = 'I am a good boy and hardworking';
+let rev = '';
+const part = sentence.split(' ');
+console.log(part);
+for(let i = 0; i < part.length; i++){
+    // console.log(sentence[i]);
+    rev =part[i] + " " + rev
+};
+console.log(rev);
 
 
 //
