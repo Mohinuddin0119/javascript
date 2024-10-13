@@ -1,4 +1,4 @@
-// [ first to variable, Operator,condition,array, for loop , while loop,string(touppercase,lowercase,trim,slice,join,concat,includes),string reverse,object,traversing and reversing in an array,function ]
+// [ first to variable, Operator,condition,array, for loop , while loop,string(touppercase,lowercase,trim,slice,join,concat,includes),string reverse,object,traversing and reversing in an array,function,Math, abs, round, ceil, floor, and random number,JS Date and time ]
 
 /*
 // variable data types
@@ -1026,4 +1026,63 @@ function sumOFEvenNumbers(numbers){
 }
 const sum = sumOFEvenNumbers(numbers);
 console.log("Sum of even numbers is:",sum);
+
+// Math min, max
+console.log(Math.min(10,20,3,0,8,-0,1,100));
+console.log(Math.max(10,20,50,11,1000));
+// absolute(abs)
+console.log(Math.abs(-80));
+console.log(Math.abs(10-80));  //operator dont show
+console.log((Math.abs(10-5)));
+// round 
+console.log(Math.round(2.4)); //2
+console.log(Math.round(2.5)); //3
+console.log(Math.round(2.9)); //3
+//ceil(up),
+console.log(Math.ceil(2.0001)) //3
+console.log(Math.ceil(2.99999)) //3
+//  floor(down)
+console.log(Math.floor(2.999999)); //2
+console.log(Math.floor(2.0001));  //2
+// random number
+console.log(Math.random());  //in 0 output show
+// limit add (0 to 10  output will be show)
+console.log(Math.random()*10); 
+// limit add (0 to 100  output will be show)
+// console.log(Math.random()*100); 
+// just show integer number
+console.log(Math.round(Math.random()*10));
+
+// JS Date and time
+const today = new Date();
+const date = new Date('2023-10-23');
+console.log(date);
+// set
+date.setDate(25);
+date.setMonth(5);
+date.setFullYear(2020);
+console.log(date);
+const date1 = new Date(2023,10,23);
+console.log(date1);
+console.log(today)
+// get
+const date2 = new Date('2023-10-23');
+console.log(date2.getDate());  //23
+console.log(date2.getMonth());  //index show 9
+console.log(date2.getFullYear());  //2023
 */
+// swap variable
+// use temp 
+let a = 10;
+let b = 5;
+console.log(a,b);
+let temp = a;
+a = b;
+b = temp;
+console.log(a,b);
+// destructing
+let x = 20;
+let y = 30;
+console.log(x,y);
+[x,y] = [y,x];
+console.log(x,y)
