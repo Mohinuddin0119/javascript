@@ -356,7 +356,7 @@ for(let i = 0; i <sentences.length; i++){
     string += sentences[i];
 }
 console.log(string);
-*/
+
 // task 4
 const statement = 'I am a hard working person';
 let rev = '';
@@ -367,3 +367,75 @@ for(const part of state){
 }
 console.log(rev);;
 
+// function task
+// task 1
+function multiply(a,b,c,d){
+    const e = a * b * c * d;
+    return e;
+}
+const fourNumbersMultiply = multiply(5,2,2,5);
+console.log("Multiply number is :",fourNumbersMultiply)
+// task 2
+function oddOrEven(number){
+    if(number % 2 === 1){
+        const multiply = number * 2;
+        return multiply;
+    }
+    else{
+        const divide = number / 2;
+        return divide;
+    }
+}
+const numbers = oddOrEven(5);
+const number = oddOrEven(10);
+console.log("Result is :",numbers)
+console.log("Result is :",number);
+
+// task 3
+function make_avg(numbers){
+    let avg = 0;
+    let sum = 0;
+    const len = numbers.length;
+    for(const number of numbers){
+        console.log(number);
+        sum += number;
+        avg = sum / len;
+    }
+    console.log("sum is ",sum);
+    console.log("average is",avg);
+}
+const numbs = [1,2,4,5,8];
+const avg = make_avg(numbs);
+// task 4
+let sum = '';
+function count_zero(str){
+    for(const part of str){
+        // console.log(part);
+        if(part === '0'){
+            console.log(part);
+            sum = part + sum;
+        }
+        else{
+            // console.log('false',part);
+        }
+    }
+    console.log("zero is:",sum);
+    console.log(`count how many 0’s are there in that string.`,sum.length);
+}
+const string = '1000010'; 
+const count = count_zero(string);
+// task 5*/
+function odd_even(numbers){
+    if(numbers % 2===0){
+        const even = 'Even';
+        return even;
+    }
+    else{
+        const odd = 'Odd';
+        return odd;
+    }
+}
+const number = odd_even(5);
+const numb = odd_even(4);
+console.log("Odd or Even:",number)
+console.log("Odd or Even:",numb)

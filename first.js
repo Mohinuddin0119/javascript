@@ -979,4 +979,51 @@ function getAge(person){
     console.log(age, name);
 }
 getAge( person = { age : 19,name:'mohin'});
+
+// sum of all numbers in an array using function
+function sumOfNumbers(numbers){
+    let sum = 0;
+    for(const number of numbers){
+        console.log(number);
+        sum += number;
+    }
+    return sum;
+}
+const numbs = [10,20,30,40];
+const sum = sumOfNumbers(numbs);
+console.log("sum of all numbers is :",sum);
+
+// return all the even numbers of an array
+function evenNumbers(numbers){
+    let num = [];
+    for(const number of numbers){
+        // console.log(number);
+        if(number % 2 ===0){
+            // console.log('even number is:',number);
+            num.push(number);
+        }
+        else{
+            console.log('not even');
+        } 
+    }
+    return num;
+}
+const numbers = [10,3,5,6,2,8,14]
+const evens = evenNumbers(numbers);
+console.log(evens);
+console.log('________________')
+// sum of all even number using function
+function sumOFEvenNumbers(numbers){
+    let sum = 0;
+    for(const number of numbers){
+        // console.log(number);
+        if(number % 2===0){
+            console.log(number);
+            sum +=number;
+        }
+    }
+    return sum;
+}
+const sum = sumOFEvenNumbers(numbers);
+console.log("Sum of even numbers is:",sum);
 */
