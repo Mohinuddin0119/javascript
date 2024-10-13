@@ -367,15 +367,15 @@ for(const part of state){
 }
 console.log(rev);;
 
-// function task
-// task 1
+// ----function task
+// task 1(multiply)
 function multiply(a,b,c,d){
     const e = a * b * c * d;
     return e;
 }
 const fourNumbersMultiply = multiply(5,2,2,5);
 console.log("Multiply number is :",fourNumbersMultiply)
-// task 2
+// task 2 (oddOrEven)
 function oddOrEven(number){
     if(number % 2 === 1){
         const multiply = number * 2;
@@ -390,8 +390,7 @@ const numbers = oddOrEven(5);
 const number = oddOrEven(10);
 console.log("Result is :",numbers)
 console.log("Result is :",number);
-
-// task 3
+// task 3(make_avg)
 function make_avg(numbers){
     let avg = 0;
     let sum = 0;
@@ -406,7 +405,7 @@ function make_avg(numbers){
 }
 const numbs = [1,2,4,5,8];
 const avg = make_avg(numbs);
-// task 4
+// task 4(count_zero)
 let sum = '';
 function count_zero(str){
     for(const part of str){
@@ -424,7 +423,7 @@ function count_zero(str){
 }
 const string = '1000010'; 
 const count = count_zero(string);
-// task 5*/
+// task 5(odd_even)
 function odd_even(numbers){
     if(numbers % 2===0){
         const even = 'Even';
@@ -439,3 +438,4 @@ const number = odd_even(5);
 const numb = odd_even(4);
 console.log("Odd or Even:",number)
 console.log("Odd or Even:",numb)
+*/
