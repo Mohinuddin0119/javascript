@@ -45,7 +45,7 @@ function cmToM(cm){
     return meter;
 }
 console.log(cmToM(200));
-*/
+
 // check a year is a leap year
 // simple logic
 function isLeapYear(year){
@@ -76,3 +76,41 @@ const isleap4 = isLeapYear2(1900);
 const isleap5 = isLeapYear2(2020);
 console.log(isleap,isleap2,isleap3,isleap4,isleap5);
 
+// The average of the even numbers in an array
+function avg_even(numbers){
+    let evens = [];
+    for(const number of numbers){
+        if(number % 2 === 0){
+            console.log(number);
+            evens.push(number);
+        }
+    }
+    console.log(evens);   //create array by even number
+    let sum = 0;
+    for(const number of evens){
+        sum += number;
+    }
+    const len = evens.length;
+    console.log('The items of even number is :',len);
+    const avgEven = sum / len;
+    console.log("Average of the even number is :",avgEven);
+}
+const nums = [12,16,5,15,20,25,50];
+const average = avg_even(nums);
+// Remove Duplicate items from an array
+function noDuplicate(array){
+    const unique = [];
+    for(const item of array){
+        if(unique.includes(item) === false){
+            unique.push(item);
+        }
+    }
+    return unique;
+}
+const biryanikhor = ['abul','babul','cabul','dabul','abul','abul','cabul','dabul','kabul'];
+const numbers = [1,5,2,1,2,5,10,20,10,9];
+const unique = noDuplicate(biryanikhor);
+const unique1 = noDuplicate(numbers);
+console.log(unique);
+console.log(unique1);
+*/
