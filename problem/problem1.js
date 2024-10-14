@@ -177,16 +177,145 @@ function getMax(numbers){
 }
 const numbers = [10,20,50,8,5,1];
 console.log(getMax(numbers));
-*/
+
 // Find the min number in an array
 function getMin(numbers){
-    let max = numbers[0];
+    leti min = numbers[0];
     for(const number of numbers){
-        if(number < max){
-            max = number;
+        if(number < min){
+            min = number;
+        }
+    }
+    return min;
+}
+const longest = [10,1,5,25,80,100,0,-1];
+console.log(getMin(longest));
+
+// use add and multiplication to calculate wood requirements
+// chair = 3 cft
+// table = 10cft;
+// bed = 50cft;
+
+function woodQuantity(chair,table,bed){
+    const perChairWood = 3;
+    const perTableWood = 10;
+    const perBedWood = 50;
+
+    const chairTotalWood = perChairWood * chair;
+    const tableTotalWood = perTableWood * table;
+    const bedTotalWood = perBedWood * bed;
+
+    const totalWood = chairTotalWood + tableTotalWood + bedTotalWood;
+    return totalWood;
+}
+
+console.log(woodQuantity(1,1,2));
+
+// shopping requirements
+function shopping(shirt,pant,shoe){
+    const perShirt = 500;
+    const perPant = 300;
+    const perShoe = 900;
+
+    const shirtTotalPrice = perShirt * shirt;
+    const pantTotalPrice = perPant * pant;
+    const shoeTotalPrice = perShoe * shoe;
+
+    const totalPrice = shirtTotalPrice + pantTotalPrice + shoeTotalPrice;
+    return totalPrice;
+};
+console.log(shopping(1,2,1));
+
+//  find the cheapest price from an array
+function getMin(numbers){
+    let min = numbers[0];
+    for(const number of numbers){
+        // console.log(number);
+        if(number < min ){
+            min = number;
+        }
+    }
+    return min;
+}
+const prices = [10000,20000,50000,100000,5000];
+const cheapestPrice = getMin(prices)
+console.log("chepest phone price is :",cheapestPrice);
+
+//  Find the cheapest phone from an array of phone objects
+const mobiles = [
+    {name:"samsug", price: 20000, camera: '12mp', color: 'black'},
+    {name:"Xiami", price: 30000, camera: '12mp', color: 'black'},
+    {name:"Symphone", price: 15000, camera: '12mp', color: 'black'},
+    {name:"Vivo", price: 25000, camera: '12mp', color: 'black'},
+    {name:"Honor", price: 50000, camera: '12mp', color: 'black'},
+    {name:"Iphone", price: 100000, camera: '12mp', color: 'black'},
+    {name:"Walton", price: 10000, camera: '12mp', color: 'black'},
+];
+function getChepeastPhone(phones){
+    let min = phones[0]
+    for(const phone of phones){
+        // console.log(phone);
+        if(phone.price < min.price){
+            min = phone;
+        }
+    }
+    return min;
+}
+const cheapestPhone = getChepeastPhone(mobiles);
+console.log("Cheapest phone is ",cheapestPhone);
+// Find the expensive phone from an array of phone objects
+const phones = [
+    {name:"Samsung", price: 20000, camera: "12mp", color: "black" },
+    {name:"Symphone", price: 15000, camera: "12mp", color: "black" },
+    {name:"Xiami", price: 25000, camera: "12mp", color: "black" },
+    {name:"Honor", price: 30000, camera: "12mp", color: "black" },
+    {name:"Iphone", price: 100000, camera: "12mp", color: "black" },
+    {name:"Walton", price: 10000, camera: "12mp", color: "black" },
+]
+
+function getExpensivePhone(phones){
+    let max = phones[0];
+    for(const phone of phones){
+        // console.log(phone);
+        if(phone.price > max.price){
+            max = phone;
         }
     }
     return max;
 }
-const longest = [10,1,5,25,80,100,0];
-console.log(getMin(longest));
+const expensivePhone = getExpensivePhone(phones);
+console.log("Expensive phone is",expensivePhone);
+
+// find Largest word in this string
+function getLargestString(str){
+    let part = str.split(' ');
+    // console.log(part);
+    let large = part[0];
+    for(const alada of part){
+        // console.log(alada);
+        if(alada.length > large.length){
+            large = alada;
+        }
+    }
+    return large;
+}
+const string = "I am learning Web development to become a programmer .";
+const getLarge = getLargestString(string);
+console.log("Largest Word in this string is :",getLarge);
+*/
+// find lowest word in this string
+function getLowestString(str){
+    let alada = str.split(' ');
+    let min = alada[0];
+    for(const part of alada){
+        // console.log(part);
+        if(part.length < min.length){
+            min = part;
+        }
+    }
+    return min;
+}
+const str = 'I am Student. I studying of diploma at Dhaka of mohammadpur in bangladesh.'
+console.log("Lowest word in this string is :",getLowestString(str))
+
+// module 22_4
