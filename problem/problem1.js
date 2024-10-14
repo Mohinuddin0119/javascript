@@ -113,4 +113,80 @@ const unique = noDuplicate(biryanikhor);
 const unique1 = noDuplicate(numbers);
 console.log(unique);
 console.log(unique1);
+
+// compare two variable
+const tanha = 80;
+const ponko = 150;
+if(tanha > ponko){
+    console.log('tanha is boss');
+}
+else{
+    console.log('ponko is big');
+}
+// using function
+function getTwoNumber(num1,num2){
+    if(num1 > num2){
+        console.log("Number1 is big",num1);
+    }
+    else{
+        console.log("Number2 is big",num2);
+    }
+}
+getTwoNumber(50,100);
+// compare three number/variable
+const num1 = 50;
+const num2 = 70;
+const num3 = 100;
+if(num1 > num2 && num1 > num3){
+    console.log("Rafi is boss");
+}
+else if(num2 > num1 && num2 > num3){
+    console.log('Mahi is boss');
+}
+else{
+    console.log('Sakib is boss');
+
+}
+// using function
+function getThreeNumber(num1,num2,num3){
+    if(num1 > num2 && num1 > num3){
+        console.log("Number 1 is boss");
+    }
+    else if(num2 > num1 && num2 > num3){
+        console.log('Number 2 is boss');
+    }
+    else{
+        console.log('Number 3 is boss');
+    
+    }
+}
+getThreeNumber(50,100,40);
+// compare many items
+const max = Math.max(10,20,50,40,8,0,100);
+console.log(max);
+
+// Find the max number in an array
+function getMax(numbers){
+    let max = numbers[0];
+    for(const number of numbers){
+        if(number > max){
+            max = number;
+        }
+    }
+    return max;
+}
+const numbers = [10,20,50,8,5,1];
+console.log(getMax(numbers));
 */
+// Find the min number in an array
+function getMin(numbers){
+    let max = numbers[0];
+    for(const number of numbers){
+        if(number < max){
+            max = number;
+        }
+    }
+    return max;
+}
+const longest = [10,1,5,25,80,100,0];
+console.log(getMin(longest));

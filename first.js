@@ -1070,7 +1070,7 @@ const date2 = new Date('2023-10-23');
 console.log(date2.getDate());  //23
 console.log(date2.getMonth());  //index show 9
 console.log(date2.getFullYear());  //2023
-*/
+
 // swap variable
 // use temp 
 let a = 10;
@@ -1086,3 +1086,4 @@ let y = 30;
 console.log(x,y);
 [x,y] = [y,x];
 console.log(x,y)
+*/

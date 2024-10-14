@@ -438,4 +438,69 @@ const number = odd_even(5);
 const numb = odd_even(4);
 console.log("Odd or Even:",number)
 console.log("Odd or Even:",numb)
+
+//a function to convert temperature from Celsius to Fahrenheit.
+function celToFah(celsius){
+        const fahrenheit = celsius * 33.8
+        return fahrenheit;
+}
+console.log(`celsius to fahrenheit : ${celToFah(2)} `);
+// Count how many times the a number is repeated in the array
+const numbers = [5,6,11,12,98,5];
+function countNumber(numbers){
+    let count = [];
+    for(const number of numbers){
+        if(number === 5){
+            count.push(number);
+        }
+    }
+    const len = count.length;
+    console.log("Total repeat numbers :",len);
+    return count;
+}
+console.log(countNumber(numbers));
+// a function to count the number of vowels in a string.
+function countVowelsString(array){
+    let count = [];
+    const vowels = ['a','e','i','o','u','A',"E",'I',"O","U"];
+    for(const item of vowels){
+        // console.log(item);
+        for(const element of array){
+            // console.log(element);
+            if(item === element){
+                count.push(item);
+            }
+        }
+    }
+    const len = count.length;
+    console.log("count the number of vowels is :",len)
+    return count;
+}
+const vowelsCount = countVowelsString('Bangladesh');
+const vowelsCount1 = countVowelsString('I am a good boy that why this worl i do');
+console.log(vowelsCount);
+console.log(vowelsCount1);
+
+//  a function to find the longest word in a given string
+function logestWord(str){
+    let alada = str.split(" ");
+    let count = 0;
+    for(const part of alada){
+        console.log(part);
+        if(part.length >  count){
+            count = part.length;
+        }
+    }
+    return count;
+}
+const person = 'I am learning Programming to become a programmer'
+const findLogestWord = logestWord(person);
+console.log(findLogestWord); // just index show 
+
+// Generate a random number between 10 to 20.
+function randomNumber(min,max){
+    return Math.floor(Math.random()* (max - min + 1)) + min;
+}
+const random = randomNumber(10,20)
+console.log(random);
 */
