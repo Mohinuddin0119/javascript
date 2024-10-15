@@ -302,7 +302,7 @@ function getLargestString(str){
 const string = "I am learning Web development to become a programmer .";
 const getLarge = getLargestString(string);
 console.log("Largest Word in this string is :",getLarge);
-*/
+
 // find lowest word in this string
 function getLowestString(str){
     let alada = str.split(' ');
@@ -318,4 +318,194 @@ function getLowestString(str){
 const str = 'I am Student. I studying of diploma at Dhaka of mohammadpur in bangladesh.'
 console.log("Lowest word in this string is :",getLowestString(str))
 
-// module 22_4
+// calculate the total cost the product
+function getShoppingTotal(products){
+    let total = 0;
+    for(const product of products){
+        console.log(product);
+        total = total + product.price
+    }
+    return total;
+}
+
+const products = [
+    {name: 'Shampo', price : 300},
+    {name: 'Shirt', price : 500},
+    {name: 'Pant', price : 700},
+    {name: 'Shoe', price : 900},
+    {name: 'Panjabi', price : 800},
+]
+const shoppingTotal = getShoppingTotal(products);
+console.log(shoppingTotal);
+
+// Calculate the total cost of the products in a shopping cart(quantity soho)
+function getShoppingCart(products){
+    let total = 0;
+    for(const product of products){
+        const thisProductCost = product.price * product.quantity;
+        total = total + thisProductCost;
+    }
+    return total;
+}
+
+const products = [
+    {name : 'Shampo', price: 300, quantity: 5},
+    {name : 'Shirt', price: 500, quantity: 1},
+    {name : 'Pant', price: 700, quantity: 2},
+    {name : 'Shoe', price: 900, quantity: 1},
+    {name : 'Panjabi', price: 800, quantity: 1},
+]
+const shoppintTotal = getShoppingCart(products);
+console.log(shoppintTotal);
+
+// discount price calculation
+// upto 100: => 100 
+// more than 101 to 200 :=>90
+// more than 200: => 70
+function discountedTotal(quantity){
+    if(quantity <= 100){
+        const total = quantity * 100;
+        return total;
+    }
+    else if(quantity <= 200){
+        const total = quantity * 90
+        return total;
+    }
+    else{
+        const total = quantity * 70;
+        return total;
+    }
+}
+console.log(discountedTotal(201));
+
+// Multi-layer discount price calculation
+// first 100 :=> 100
+// 101to200 :=> 90 
+// above 200:=>70
+function discountedTotalLayer(quantity){
+    const first100Price = 100;
+    const second100Price = 90;
+    const above200Price = 70;
+    if(quantity <= 100){
+        const total = quantity * first100Price;
+        return total;
+    }
+    else if(quantity <= 200){
+        const first100Total = first100Price * 100;
+        const remaingQuantity = quantity - 100;
+        const remaingTotal = remaingQuantity * second100Price;
+        const total = first100Total + remaingTotal;
+        return total;
+    }
+    else{
+        const first100Total = first100Price * 100;
+        const second100Total = second100Price * 100;
+        const remaingQuantity = quantity - 200;
+        const remaingTotal = remaingQuantity * above200Price;
+        const total = first100Total + second100Total + remaingTotal;
+        return total;
+    }
+}
+console.log(discountedTotalLayer(205));
+
+// Simple calculator to call function inside a function
+// add()
+function add(num1,num2){
+    const sum = num1 + num2;
+    return sum;
+}
+// subtractor()
+function sub(num1,num2){
+    const sub = num1 - num2;
+    return sub;
+}
+// multiply()
+function multiply(num1,num2){
+    const mul = num1 * num2;
+    return mul;
+}
+// division()
+function division(num1 , num2){
+    const div = num1 / num2;
+    return div;
+}
+// inside fuction
+function calculation(a,b,operation){
+    if(operation === 'add'){
+        const result = add(a,b);
+        return result;
+    }
+    else if(operation === 'sub'){
+        const result = sub(a,b);
+        return result;
+    }
+    else if(operation === 'multiply'){
+        const result = multiply(a,b);
+        return result;
+    }
+    else if(operation === 'division'){
+        const result = division(a,b);
+        return result;
+    }
+    else{
+        return "this operation only add sub multiply and division";
+    }
+}
+
+const calculateFunction = calculation(5,7,'add');
+console.log(calculateFunction);
+console.log(calculation(7,5,'sub'));
+console.log(calculation(7,5,'multiply'));
+console.log(calculation(10,5,'division'));
+
+// Handle unexpected function input parameter error
+// in case number 
+function multiply(num1,num2){
+    if(typeof num1 !== 'number' || typeof num2 !== 'number'){
+        return "please provide a number";
+    }
+    const mul = num1 * num2;
+    return mul;
+}
+
+const mul = multiply(2,5);
+console.log(mul);
+console.log(multiply(2,"five"));
+// in case string
+function fullName(first,second){
+    if(typeof first !== "string"){
+        return "first name should be a string";
+    }
+    else if(typeof second !== "string"){
+        return "second name should be a string";
+    }
+    const full = first + " " + second;
+    return full;
+}
+console.log(fullName('mohin','uddin'));
+console.log(fullName('mohin',5));
+console.log(fullName([5],"5"));
+// in case object
+function getPrice(product){
+    if(typeof product !== 'object'){
+        return "please provide an object";
+    }
+    const price = product.price;
+    return price;
+}
+const product = {name : 'shirt', price:200, color: 'white'};
+console.log(getPrice(product))
+console.log(getPrice(5));
+// in case array*/
+function getSecond(numbers){
+    console.log(Array.isArray(numbers));
+    if(Array.isArray(numbers) === false){
+        return "please provide an array"
+    }
+    const second = numbers[1];
+    return second;
+}
+console.log(getSecond([5,25,10]));
+console.log(getSecond(5));
+
+// module 22_8
