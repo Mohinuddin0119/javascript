@@ -503,4 +503,105 @@ function randomNumber(min,max){
 }
 const random = randomNumber(10,20)
 console.log(random);
+
+// js problem part2
+// find the lowest number in the array
+function getLowestNumber(numbers){
+    let min = numbers[0]
+    for(const number of numbers){
+        // console.log(number);
+        if(number < min){
+            min = number;
+        }
+    }
+    return min;
+}
+const height = [167,190,120,165,137,100];
+const lowestNumber = getLowestNumber(height);
+console.log(lowestNumber);
+
+// find the friend with the smallest name(something problem in code)
+function getSmallestName(names){
+    let small = names[0];
+    for(const name of names){
+        // console.log(name);
+        if(name.length < small.length){
+            small = name;
+        }
+    }
+    return small;
+}
+const names = ['rahim','robin','raf','roni','rashed','Hili'];
+const getSmallest = getSmallestName(names);
+console.log(getSmallest);
+
+// calculate total budget function
+function calculateElectronicsBudget(laptop,tablet,mobile){
+    const perLaptopPrice = 35000;
+    const perTabletPrice = 15000;
+    const perMobilePrice = 20000;
+
+    const laptopTotalMoney = perLaptopPrice * laptop;
+    const tabletTotalMoney = perTabletPrice * tablet;
+    const mobileTotalMoney = perMobilePrice * mobile;
+
+    const totalBudget = laptopTotalMoney + tabletTotalMoney + mobileTotalMoney;
+    return totalBudget;
+}
+console.log(calculateElectronicsBudget(1,1,2));
+
+// returns the average price of phone
+function findAveragePrice(phones){
+    let prices = [];
+    for(const phone of phones){
+        console.log(phone);
+        prices.push(phone.price);
+    }
+    let totalPrice = 0;
+    for(const price of prices){
+        console.log(price)
+        totalPrice += price;
+    }
+    console.log("Total price of phone is :",totalPrice);
+    const avgPrice = totalPrice / prices.length;
+    return avgPrice;
+}
+
+const phones = [
+    {model: "PhoneA", brand: "Iphone", price: 100000},
+    {model: "PhoneB", brand: "Samsung", price: 40000},
+    {model: "PhoneC", brand: "Oppo", price: 30000},
+    {model: "PhoneD", brand: "Nokia", price: 10000},
+    {model: "PhoneE", brand: "Honor", price: 25000},
+    {model: "PhoneF", brand: "Vivo", price: 15000},
+];
+console.log("The average price of phones is :",findAveragePrice(phones));
 */
+// calculate is the total salary has to be provided by the company in a month
+function totalSalary(employess){
+    let totalSalaryArr = [];
+    for(const employee of employess){
+        const startingSalary = employee.starting;
+        const incrementSalary = employee.increment * employee.expericence;
+        const employeeTotalSalary = startingSalary + incrementSalary;
+        totalSalaryArr.push(employeeTotalSalary);
+
+    }
+    let totalSalary =  0;
+    for(const salary of totalSalaryArr){
+        console.log(salary);
+        totalSalary += salary;
+    }
+    return totalSalary;
+
+}
+
+const employess = [
+    {name: 'Mohin', expericence: 5, starting: 20000, increment : 5000},
+    {name: 'Mahi', expericence: 5, starting: 20000, increment : 7000},
+    {name: 'Rafiul', expericence: 5, starting: 20000, increment : 2000},
+    {name: 'Abrar', expericence: 5, starting: 20000, increment : 4000},
+    {name: 'Ayon', expericence: 5, starting: 20000, increment : 3000},
+];
+const getTotalSalary = totalSalary(employess);
+console.log("Calculate is the total salary is :",getTotalSalary);
