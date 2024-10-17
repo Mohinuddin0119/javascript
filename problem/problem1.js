@@ -508,4 +508,3 @@ function getSecond(numbers){
 console.log(getSecond([5,25,10]));
 console.log(getSecond(5));
 
-// module 22_8

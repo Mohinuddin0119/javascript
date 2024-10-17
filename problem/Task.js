@@ -576,7 +576,7 @@ const phones = [
     {model: "PhoneF", brand: "Vivo", price: 15000},
 ];
 console.log("The average price of phones is :",findAveragePrice(phones));
-*/
+
 // calculate is the total salary has to be provided by the company in a month
 function totalSalary(employess){
     let totalSalaryArr = [];
@@ -605,3 +605,4 @@ const employess = [
 ];
 const getTotalSalary = totalSalary(employess);
 console.log("Calculate is the total salary is :",getTotalSalary);
+*/
