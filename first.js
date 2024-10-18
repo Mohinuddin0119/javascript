@@ -1086,4 +1086,58 @@ let y = 30;
 console.log(x,y);
 [x,y] = [y,x];
 console.log(x,y)
+
+// js Object
+const nayok = {
+    name : 'sakib khan',
+    id : 121,
+    address: 'movie cinema',
+    isSingle : false,
+    friends:['abul','babul','kabul'],
+    act: function(){
+        return "this is sakib khan";
+    },
+    car : {
+        brand: "bmw",
+        price : 2000000,
+        model:2020
+    }
+}
+console.log(nayok);
+console.log(nayok.car.brand);
+console.log(nayok.act());
+// 
+function get(num1, num2){
+    console.log(num1 , num2);
+    console.log(arguments);
+    console.log(arguments[4])
+}
+get(11,22,25,30,40,50);
+
+// searching products
+const products =[
+    {id:1, name:'walton phone', price: 10000},
+    {id:2, name:'Lenovo laptop', price: 10000},
+    {id:3, name:'Honor phone', price: 10000},
+    {id:4, name:'Hp monitor', price: 10000},
+    {id:5, name:'Hp laptop 2020', price: 10000},
+    {id:6, name:'asus laptop', price: 10000},
+    {id:7, name:'Vivo Phone', price: 10000},
+    {id:8, name:'Iphone', price: 10000},
+    {id:9, name:'dahua monitor', price: 10000},
+    {id:10, name:'lava monitor', price: 10000},
+];
+function matchingProducts(products, search){
+    let matced = [];
+    for(const product of products){
+        // console.log(product);
+        if(product.name.toLowerCase().includes(search.toLowerCase())){
+            matced.push(product)
+        }
+    }
+    return matced
+}
+// console.log(matchingProducts(products, 'Phone'))
+console.log(matchingProducts(products, 'monitor'))
+console.log(matchingProducts(products, 'laptop'))
 */

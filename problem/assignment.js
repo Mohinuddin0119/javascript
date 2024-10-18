@@ -48,8 +48,8 @@ function deleteInvalids(array){
 
         let newArray = [];
         for(const arr of array){
-            // console.log(arr);
-            if(typeof arr === 'number'){
+            console.log(arr);
+            if(typeof arr === 'number' && !isNaN(arr)){
                 // console.log(arr);
                 newArray.push(arr);
             }
@@ -63,7 +63,8 @@ function deleteInvalids(array){
 const arr = ['12',1,null,undefined,18,-19,NaN,[1,2],{ob:'lala'}];
 console.log(deleteInvalids(arr));
 console.log(deleteInvalids({name:'lalalaa'}));
-*/
+console.log(!isNaN(NaN));
+
 // password generate object using function
 function password(obj){
     const len = Object.keys(obj).length;
@@ -88,3 +89,27 @@ const obj1 = {name:'kolimuddin', siteName: "google"};
 // console.log();
 console.log(password(obj2));
 console.log(password(obj1));
+*/
+// (not working this) monthly saving related function
+function monthlySavings(arr,livingCost){
+    let total = 0;
+    for(const item of arr){
+        // console.log(item)
+        if(item >= 3000){
+            const tax = item * 20 /100;
+            // console.log(tax)
+            const have = item -tax;
+            total = have;
+        }
+        total += item;
+
+    }
+    const saving = total - livingCost;
+    console.log(saving)
+    
+    return total;
+}
+const saving = monthlySavings([1000,2000,3500],5000);
+// const saving1 = monthlySavings([1000,2000,3000],5000);
+// console.log(saving1);
+console.log(saving);
