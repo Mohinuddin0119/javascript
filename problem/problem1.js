@@ -496,7 +496,7 @@ function getPrice(product){
 const product = {name : 'shirt', price:200, color: 'white'};
 console.log(getPrice(product))
 console.log(getPrice(5));
-// in case array*/
+// in case array
 function getSecond(numbers){
     console.log(Array.isArray(numbers));
     if(Array.isArray(numbers) === false){
@@ -508,3 +508,43 @@ function getSecond(numbers){
 console.log(getSecond([5,25,10]));
 console.log(getSecond(5));
 
+// validation 
+function validation(info){
+    if(typeof info !== 'object'){
+        return "input should be an object";
+    }
+    else if(!info.name || !info.age){
+        return "Object must contain name and age property";
+    }
+    else if(typeof info.name !== 'string' || typeof info.age !== 'number'){
+        return "name should ne string, age should be a number"
+    }
+    else if(info.age <= 0){
+        return "age should be a positive number"
+    }
+
+    return `My name is ${info.name}. my age is ${info.age}`;
+}
+// console.log(validation({name:'mohin', age: 20}))
+
+console.log(validation(5,7))
+console.log(validation({name:'mohin',}))
+console.log(validation({name:'16',age:'mahi'}))
+console.log(validation({name:'16',age:-26}))
+*/
+// ফাংশন নেম দিতে হবে anaToVori । একটা ফাংশন এ প্যারামিটার হিসেবে নিবে আনা । তারপর সেটাকে ভরিতে কনভার্ট করে কত মান হয় সেই সংখ্যা রিটার্ন করতে হবে
+function anaToVori(ana){
+    if(typeof ana !== 'number'){
+        return "input should be a number"
+    }else if(ana <= 0){
+        return "ana should be a positive integer number"
+    }
+
+    const vori = ana * 0.0625;
+    return vori;
+}
+console.log(anaToVori(16));
+
+console.log(anaToVori(-16));
+console.log(anaToVori('string'));
+// he order difference product so you pride me costing total money 
