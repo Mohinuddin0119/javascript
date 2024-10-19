@@ -531,7 +531,7 @@ console.log(validation(5,7))
 console.log(validation({name:'mohin',}))
 console.log(validation({name:'16',age:'mahi'}))
 console.log(validation({name:'16',age:-26}))
-*/
+
 // ফাংশন নেম দিতে হবে anaToVori । একটা ফাংশন এ প্যারামিটার হিসেবে নিবে আনা । তারপর সেটাকে ভরিতে কনভার্ট করে কত মান হয় সেই সংখ্যা রিটার্ন করতে হবে
 function anaToVori(ana){
     if(typeof ana !== 'number'){
@@ -547,4 +547,85 @@ console.log(anaToVori(16));
 
 console.log(anaToVori(-16));
 console.log(anaToVori('string'));
-// he order difference product so you pride me costing total money 
+
+// he order difference product so you return me costing total money 
+// one singara = 7 tk
+// one somucha = 10 tk
+// one jilapi = 15 tk
+function pandaCost(singara,somucha,jilapi){
+    if(typeof singara !== 'number' || typeof somucha !== 'number' || typeof jilapi !== 'number'){
+        return "input should be a number";
+    }
+    else if(isNaN(singara) || isNaN(somucha) || isNaN(jilapi)){
+        return "should be exact number"
+    }
+    else if(singara <= 0 || somucha <= 0 || jilapi <=0 ){
+        return "should be positive an integer number"
+    }
+
+
+    const perSingara = 7;
+    const perSomucha = 10;
+    const perJilapi = 15;
+
+    const singaraTotalPrice = perSingara * singara;
+    const somuchaTotalPrice = perSomucha * somucha;
+    const jilapiTotalPrice = perJilapi * jilapi;
+
+    const totalPrice = singaraTotalPrice + somuchaTotalPrice + jilapiTotalPrice;
+    return totalPrice;
+
+}
+console.log(pandaCost(3,2,2));
+console.log(pandaCost('3',2,2));
+console.log(pandaCost(NaN,2,2));
+console.log(pandaCost(0,-2,2));
+*/
+// return picnic budget
+// 100 person = 5000
+// 100 to 200 but first 100 = 5000 second 100 = 4000
+// 201 to ....
+// so first 100 = 5000
+// second 100 = 4000
+// 201 to ...=3000
+function picnicBudget(number){
+    // validation
+    if(typeof number !== 'number' || isNaN(number)){
+        return "input should be a number"
+    }
+    else if(number <= 0){
+        return "should be possitve integer number"
+    }
+
+
+    // code
+    const first100Price = 5000;
+    const second100Price = 4000;
+    const thirdPrice = 3000;
+
+    if(number <= 100){
+        const picnicBudget = first100Price * number;
+        return picnicBudget;
+    }
+    else if(number <= 200){
+        const first100Total = first100Price * 100;
+        const remaingQuantity = number - 100;
+        const secondTotal = remaingQuantity * second100Price;
+        const picnicBudget = first100Total + secondTotal;
+        return picnicBudget;
+    }
+    else{
+        const first100Total = first100Price * 100;
+        const second100Total = second100Price * 100;
+        const remaingQuantity = number - 200;
+        const thirdTotal = remaingQuantity * thirdPrice;
+        const picnicBudget = first100Total + second100Total + thirdTotal;
+        return picnicBudget
+    }
+
+}
+console.log(picnicBudget(100))
+
+console.log(picnicBudget('101s'))
+console.log(picnicBudget(0))
+console.log(picnicBudget(201))
